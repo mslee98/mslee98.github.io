@@ -26,8 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'yarn'
-          cache-dependency-path: '**/yarn.lock'
+          # 캐시는 Corepack 활성화 후에 설정
       
       - name: Enable Corepack and prepare Yarn
         run: |
@@ -36,7 +35,8 @@ jobs:
           # Shell 명령어 캐시 새로고침
           hash -r || true
           # Yarn 버전 확인
-          yarn --version
+          echo "Yarn path: $(which yarn)"
+          echo "Yarn version: $(yarn --version)"
       
       - name: Install dependencies
         run: yarn install --frozen-lockfile
