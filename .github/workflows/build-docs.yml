@@ -38,10 +38,8 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
       
-      - name: Setup Yarn
-        uses: actions/setup-yarn@v1
-        with:
-          yarn-version: '4.5.2'
+      - name: Prepare Yarn
+        run: corepack prepare yarn@4.5.2 --activate
       
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
