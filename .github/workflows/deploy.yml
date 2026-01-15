@@ -31,8 +31,15 @@ jobs:
       
       - name: Enable Corepack and setup Yarn
         run: |
+          # Corepack 활성화
           corepack enable
+          # Yarn 4.5.2 준비 및 활성화
           corepack prepare yarn@4.5.2 --activate
+          # Shell 캐시 새로고침
+          hash -r
+          # Yarn 버전 확인
+          echo "Yarn path: $(which yarn)"
+          echo "Yarn version: $(yarn --version)"
       
       - name: Install dependencies
         run: yarn install --frozen-lockfile
