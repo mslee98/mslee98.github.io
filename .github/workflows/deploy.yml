@@ -1,76 +1,76 @@
-name: Deploy to mslee98.github.io
+# name: Deploy to mslee98.github.io
 
-on:
-  # main 브랜치에 푸시될 때 실행
-  push:
-    branches:
-      - main
-  # 수동 실행 가능
-  workflow_dispatch:
+# on:
+#   # main 브랜치에 푸시될 때 실행
+#   push:
+#     branches:
+#       - main
+#   # 수동 실행 가능
+#   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+# permissions:
+#   contents: write
+#   pages: write
+#   id-token: write
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 전체 히스토리 필요 (빌드 타임 포스트 생성용)
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout source repository
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0 # 전체 히스토리 필요 (빌드 타임 포스트 생성용)
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          # 캐시는 Corepack 활성화 후에 설정
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 22
+#           # 캐시는 Corepack 활성화 후에 설정
       
-      - name: Enable Corepack and prepare Yarn
-        run: |
-          corepack enable
-          corepack prepare yarn@4.5.2 --activate
-          # Shell 명령어 캐시 새로고침
-          hash -r || true
-          # Yarn 버전 확인
-          echo "Yarn path: $(which yarn)"
-          echo "Yarn version: $(yarn --version)"
+#       - name: Enable Corepack and prepare Yarn
+#         run: |
+#           corepack enable
+#           corepack prepare yarn@4.5.2 --activate
+#           # Shell 명령어 캐시 새로고침
+#           hash -r || true
+#           # Yarn 버전 확인
+#           echo "Yarn path: $(which yarn)"
+#           echo "Yarn version: $(yarn --version)"
       
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+#       - name: Install dependencies
+#         run: yarn install --frozen-lockfile
       
-      - name: Build
-        run: yarn docs:build
+#       - name: Build
+#         run: yarn docs:build
       
-      - name: Checkout target repository
-        uses: actions/checkout@v4
-        with:
-          repository: mslee98/mslee98.github.io
-          token: ${{ secrets.DEPLOY_TOKEN }}
-          path: deploy
-          ref: main
-        continue-on-error: false
+#       - name: Checkout target repository
+#         uses: actions/checkout@v4
+#         with:
+#           repository: mslee98/mslee98.github.io
+#           token: ${{ secrets.DEPLOY_TOKEN }}
+#           path: deploy
+#           ref: main
+#         continue-on-error: false
       
-      - name: Copy build files
-        run: |
-          cd deploy
-          # .git와 .gitignore를 제외한 모든 파일/디렉토리 삭제
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.gitignore' -exec rm -rf {} +
-          # 빌드된 파일 복사
-          cp -r ../.vitepress/dist/* .
+#       - name: Copy build files
+#         run: |
+#           cd deploy
+#           # .git와 .gitignore를 제외한 모든 파일/디렉토리 삭제
+#           find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.gitignore' -exec rm -rf {} +
+#           # 빌드된 파일 복사
+#           cp -r ../.vitepress/dist/* .
           
-      - name: Commit and push
-        run: |
-          cd deploy
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          # 변경사항이 있을 때만 커밋 (빈 커밋 방지)
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Deploy from ms-fundamentals [skip ci]"
-            git push
-          else
-            echo "No changes to deploy"
-          fi
+#       - name: Commit and push
+#         run: |
+#           cd deploy
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+#           git add .
+#           # 변경사항이 있을 때만 커밋 (빈 커밋 방지)
+#           if [ -n "$(git status --porcelain)" ]; then
+#             git commit -m "Deploy from ms-fundamentals [skip ci]"
+#             git push
+#           else
+#             echo "No changes to deploy"
+#           fi
