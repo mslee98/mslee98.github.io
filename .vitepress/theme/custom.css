@@ -19,3 +19,35 @@
   max-width: var(--vp-layout-max-width);
   margin: 0 auto;
 }
+
+/* Hero 이미지 크기 조절 */
+.VPHero img {
+  max-width: 500px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (min-width: 960px) {
+  .VPHero img {
+    max-width: 600px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPHero img {
+    max-width: 700px !important;
+  }
+}
+
+/* Hero name 줄바꿈 처리 - "mslee98 dev-blog"에서 "dev-blog"를 다음 줄로 */
+.VPHero .name {
+  display: inline-block;
+  font-size: 0; /* 원본 텍스트 숨기기 */
+}
+
+.VPHero .name::before {
+  content: 'mslee98\A dev-blog';
+  white-space: pre;
+  font-size: 3rem; /* 원래 폰트 크기 복원 */
+  line-height: 1.2;
+}

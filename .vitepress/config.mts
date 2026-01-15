@@ -77,6 +77,20 @@ export default defineConfig({
       // Article 목록 페이지는 사이드바 없음 (태그 클라우드가 우측에 있음)
       '/sites/article/': [],
 
+      // AboutMe 페이지 사이드바
+      '/sites/aboutme/': [
+        {
+          text: 'About Me',
+          items: [
+            { text: '소개', link: '/sites/aboutme/' },
+            { text: '기술 스택', link: '/sites/aboutme/skills' },
+            { text: '경력', link: '/sites/aboutme/experience' },
+            { text: '프로젝트', link: '/sites/aboutme/projects' },
+            { text: '연락처', link: '/sites/aboutme/contact' }
+          ]
+        }
+      ],
+
       // 기본 사이드바 (다른 경로들)
       // 개별 포스트 페이지는 frontmatter의 outline: deep 설정으로 목차가 자동 표시됩니다
       '/': []

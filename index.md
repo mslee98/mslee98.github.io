@@ -3,9 +3,11 @@
 layout: home
 
 hero:
-  name: "ms98"
-  text: "ms98-ssg-blog"
-  tagline: My great project tagline
+  name: " "
+  tagline: 남들 다 하길래 만든 SSG 블로그
+  image:
+    src: /images/hero-img.png
+    alt: MS98 Blog Hero Image
   actions:
     - theme: brand
       text: Markdown Examples
