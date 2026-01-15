@@ -17,7 +17,5 @@
 .vitepress/cache
 node_modules
 
-# VitePress
-.vitepress/dist
-.vitepress/cache
-node_modules
+# Build output (루트의 dist 디렉토리는 커밋에 포함)
+# dist
