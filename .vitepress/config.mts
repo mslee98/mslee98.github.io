@@ -81,7 +81,12 @@ export default defineConfig({
     // 소셜 링크 (선택사항)
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mslee98/ms-fundamentals' }
-    ]
+    ],
+
+    // 검색 기능 활성화
+    search: {
+      provider: 'local'
+    }
   }
 })
 
