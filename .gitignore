@@ -11,3 +11,8 @@
 
 #!.yarn/cache
 .pnp.*
+
+# VitePress
+.vitepress/dist
+.vitepress/cache
+node_modules
