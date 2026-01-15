@@ -1,78 +1,46 @@
-name: Build and Update Docs
+# 배포는 GitHub Pages가 자동으로 처리
+# Settings > Pages에서 Source를 'docs' 폴더로 설정
+
+
+name: Deploy VitePress Docs
 
 on:
   push:
     branches:
       - main
-      - master
-    paths:
-      - 'sites/**'
-      - '.vitepress/**'
-      - 'index.md'
-      - 'package.json'
-      - 'yarn.lock'
-  pull_request:
-    branches:
-      - main
-      - master
-  workflow_dispatch: # 수동 실행 가능
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-update:
+  build:
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write # 커밋 및 푸시를 위한 권한
-    
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 0 # 전체 히스토리 가져오기 (커밋에 필요)
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+          node-version: 22
+
+      - run: corepack enable
+      - run: corepack prepare yarn@4.5.2 --activate
+      - run: yarn install --immutable
+      - run: yarn docs:build
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          node-version: '22'
-      
-      - name: Enable Corepack
-        run: corepack enable
-      
-      - name: Prepare Yarn
-        run: corepack prepare yarn@4.5.2 --activate
-      
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
-      
-      - name: Cache yarn dependencies
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      
-      - name: Install dependencies
-        run: yarn install --immutable
-      
-      - name: Build docs
-        run: yarn docs:build
-      
-      - name: Check for changes
-        id: verify-changed-files
-        run: |
-          if [ -n "$(git status --porcelain docs/)" ]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          else
-            echo "changed=false" >> $GITHUB_OUTPUT
-          fi
-      
-      - name: Commit and push changes
-        if: steps.verify-changed-files.outputs.changed == 'true'
-        run: |
-          git config --local user.email "mslee98@github.com"
-          git config --local user.name "mslee98"
-          git add docs/
-          git commit -m "docs: Update build output [skip ci]" || exit 0
-          git push
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
+      - uses: actions/deploy-pages@v4
+
