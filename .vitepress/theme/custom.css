@@ -1,0 +1,21 @@
+/* Article 페이지 스타일 오버라이드 */
+.article-page-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+.article-page-wrapper .vp-doc {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+/* VitePress 기본 컨테이너와 맞추기 */
+.vp-doc {
+  padding: 0 !important;
+}
+
+/* 헤더와 동일한 컨테이너 스타일 */
+.VPNavBar .container {
+  max-width: var(--vp-layout-max-width);
+  margin: 0 auto;
+}
