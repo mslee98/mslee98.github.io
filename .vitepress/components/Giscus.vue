@@ -53,9 +53,9 @@ const loadGiscus = () => {
   // 새 스크립트 생성
   const script = document.createElement('script')
   script.src = 'https://giscus.app/client.js'
-  script.setAttribute('data-repo', 'mslee98/ms-fundamentals')
-  script.setAttribute('data-repo-id', 'R_kgDOQ5cerg')
-  script.setAttribute('data-category-id', 'DIC_kwDOQ5cers4C07tC')
+  script.setAttribute('data-repo', 'mslee98/mslee98.github.io')
+  script.setAttribute('data-repo-id', 'R_kgDOQ6NkXQ')
+  script.setAttribute('data-category-id', 'DIC_kwDOQ6NkXc4C0')
   script.setAttribute('data-mapping', 'title')
   script.setAttribute('data-strict', '0')
   script.setAttribute('data-reactions-enabled', '1')
