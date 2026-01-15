@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -11,6 +12,8 @@ jobs:
     
     permissions:
       contents: write
+      pages: write
+      id-token: write
     
     steps:
       - name: Checkout repository
@@ -19,11 +22,6 @@ jobs:
           fetch-depth: 0
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      
-      - name: Setup Yarn
         uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -37,20 +35,14 @@ jobs:
       - name: Build and copy to docs
         run: yarn docs:build
       
-      - name: Check for changes
-        id: git-check
-        run: |
-          if [ -n "$(git status --porcelain docs)" ]; then
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          fi
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       
-      - name: Commit and push changes
-        if: steps.git-check.outputs.has_changes == 'true'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add docs/
-          git commit -m "chore: auto-build and update docs from dist [skip ci]" || exit 0
-          git push
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
