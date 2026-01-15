@@ -87,7 +87,7 @@ function parseFrontmatter(content: string): {
 export function loadPosts(): Post[] {
   try {
     const cwd = typeof process !== 'undefined' ? process.cwd() : ''
-    const articleDir = join(cwd, 'docs', 'article')
+    const articleDir = join(cwd, 'sites', 'article')
     const files = readdirSync(articleDir)
     
     const posts: Post[] = []
@@ -104,7 +104,7 @@ export function loadPosts(): Post[] {
 
         // 파일명에서 확장자 제거하여 URL 생성
         const fileName = file.replace(/\.md$/, '')
-        const url = `/docs/article/${fileName}`
+        const url = `/sites/article/${fileName}`
 
         // frontmatter에서 정보 추출
         const post: Post = {

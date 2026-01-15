@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Markdown Examples
-      link: /docs/markdown-examples
+      link: /sites/markdown-examples
     - theme: alt
       text: API Examples
       link: /api-examples

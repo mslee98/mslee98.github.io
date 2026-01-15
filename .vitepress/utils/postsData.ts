@@ -3,7 +3,7 @@ import type { Post } from './posts'
 export const allPosts: Post[] = [
   {
     "title": "패키지 매니저란",
-    "url": "/docs/article/packageManager",
+    "url": "/sites/article/packageManager",
     "description": "모노레포에 대한 글을 작성합니다.",
     "date": "2026-01-15",
     "tags": [
@@ -14,7 +14,7 @@ export const allPosts: Post[] = [
   },
   {
     "title": "StoryBook이란?",
-    "url": "/docs/article/storybook",
+    "url": "/sites/article/storybook",
     "description": "StoryBook에 대한 글을 작성합니다.",
     "date": "2024-01-15",
     "tags": [
@@ -25,7 +25,7 @@ export const allPosts: Post[] = [
   },
   {
     "title": "모노레포",
-    "url": "/docs/article/monorepo",
+    "url": "/sites/article/monorepo",
     "description": "모노레포에 대한 글을 작성합니다.",
     "date": "2024-01-10",
     "tags": [
@@ -36,7 +36,7 @@ export const allPosts: Post[] = [
   },
   {
     "title": "TEST",
-    "url": "/docs/article/test",
+    "url": "/sites/article/test",
     "description": "빌드 테스트시 포스트 객체 생성에 대한 글을 작성합니다.",
     "date": "2024-01-10",
     "tags": [
@@ -47,7 +47,7 @@ export const allPosts: Post[] = [
   },
   {
     "title": "TEST2",
-    "url": "/docs/article/test2",
+    "url": "/sites/article/test2",
     "description": "빌드 테스트시 포스트 객체 생성에 대한 글을 작성합니다.",
     "date": "2024-01-10",
     "tags": [

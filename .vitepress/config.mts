@@ -58,16 +58,16 @@ export default defineConfig({
     // 네비게이션 바 (상단)
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'About', link: '/docs/aboutme/' },
+      { text: 'About', link: '/sites/aboutme/' },
       { text: 'Portfolio', link: 'https://r3f-portpolio.vercel.app/' },
-      { text: 'Article', link: '/docs/article/' },
+      { text: 'Article', link: '/sites/article/' },
       {
         text: 'Insight',
         items: [
-          { text: 'Web Design', link: '/docs/insight/webDesign' },
-          { text: 'UX Design', link: '/docs/insight/uxDesign' },
-          { text: 'Front Tech', link: '/docs/insight/frontTech' },
-          { text: 'Front 지식', link: '/docs/insight/frontKnowledge' }
+          { text: 'Web Design', link: '/sites/insight/webDesign' },
+          { text: 'UX Design', link: '/sites/insight/uxDesign' },
+          { text: 'Front Tech', link: '/sites/insight/frontTech' },
+          { text: 'Front 지식', link: '/sites/insight/frontKnowledge' }
         ]
       }
     ],
@@ -75,7 +75,7 @@ export default defineConfig({
     // 사이드바 메뉴 (경로별로 설정)
     sidebar: {
       // Article 목록 페이지는 사이드바 없음 (태그 클라우드가 우측에 있음)
-      '/docs/article/': [],
+      '/sites/article/': [],
 
       // 기본 사이드바 (다른 경로들)
       // 개별 포스트 페이지는 frontmatter의 outline: deep 설정으로 목차가 자동 표시됩니다
