@@ -55,7 +55,7 @@ const loadGiscus = () => {
   script.src = 'https://giscus.app/client.js'
   script.setAttribute('data-repo', 'mslee98/mslee98.github.io')
   script.setAttribute('data-repo-id', 'R_kgDOQ6NkXQ')
-  script.setAttribute('data-category-id', 'DIC_kwDOQ6NkXc4C0')
+  script.setAttribute('data-category-id', 'DIC_kwDOQ6NkXc4C0-su')
   script.setAttribute('data-mapping', 'title')
   script.setAttribute('data-strict', '0')
   script.setAttribute('data-reactions-enabled', '1')
