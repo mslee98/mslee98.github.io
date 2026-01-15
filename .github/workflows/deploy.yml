@@ -48,9 +48,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: mslee98/mslee98.github.io
-          token: ${{ secrets.DEPLOY_TOKEN }}  # Personal Access Token 필요
+          token: ${{ secrets.DEPLOY_TOKEN }}
           path: deploy
           ref: main
+        continue-on-error: false
       
       - name: Copy build files
         run: |
