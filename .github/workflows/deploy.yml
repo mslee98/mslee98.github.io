@@ -29,17 +29,14 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: '**/yarn.lock'
       
-      - name: Enable Corepack and setup Yarn
+      - name: Enable Corepack and prepare Yarn
         run: |
-          # Corepack 활성화
           corepack enable
-          # Yarn 4.5.2 준비 및 활성화
           corepack prepare yarn@4.5.2 --activate
-          # Shell 캐시 새로고침
-          hash -r
+          # Shell 명령어 캐시 새로고침
+          hash -r || true
           # Yarn 버전 확인
-          echo "Yarn path: $(which yarn)"
-          echo "Yarn version: $(yarn --version)"
+          yarn --version
       
       - name: Install dependencies
         run: yarn install --frozen-lockfile
