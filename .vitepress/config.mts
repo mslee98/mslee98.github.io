@@ -28,7 +28,9 @@ export default defineConfig({
   // GitHub Pages 배포를 위한 base 경로 설정
   // mslee98.github.io는 루트 도메인이므로 base는 '/'로 설정
   base: '/',
-  srcDir: 'docs',
+  // srcDir는 기본값(루트 디렉토리)을 사용
+  // 소스 파일: 루트의 index.md와 sites/ 디렉토리
+  // 빌드 결과물: .vitepress/dist → scripts/copy-dist-to-root.js가 docs/로 복사
   
   // dead link 체크 비활성화 (wiki 디렉토리 삭제로 인한 링크 에러 방지)
   ignoreDeadLinks: true,
