@@ -85,11 +85,9 @@ export default defineConfig({
         {
           text: 'About Me',
           items: [
-            { text: '소개', link: '/sites/aboutme/' },
-            { text: '기술 스택', link: '/sites/aboutme/skills' },
-            { text: '경력', link: '/sites/aboutme/experience' },
-            { text: '프로젝트', link: '/sites/aboutme/projects' },
-            { text: '연락처', link: '/sites/aboutme/contact' }
+            { text: '기본정보', link: '/sites/aboutme/' },
+            { text: '기술스택', link: '/sites/aboutme/skills' },
+            { text: '자격증', link: '/sites/aboutme/contact' }
           ]
         }
       ],

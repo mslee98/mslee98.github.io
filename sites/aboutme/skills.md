@@ -7,37 +7,111 @@ outline: deep
 ## Frontend
 
 ### 언어
-- **JavaScript** - ES6+ 문법에 익숙하며, 모던 JavaScript를 활용합니다
-- **TypeScript** - 타입 안정성을 통한 안전한 코드 작성
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0;">
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/js.svg" alt="JavaScript" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">JavaScript</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/typescript.svg" alt="TypeScript" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">TypeScript</span>
+  </div>
+</div>
 
 ### 프레임워크 & 라이브러리
-- **React** - 함수형 컴포넌트, Hooks를 활용한 개발
-- **Next.js** - SSR, SSG를 활용한 풀스택 웹 애플리케이션 개발
-- **Vue.js** - 컴포지션 API를 활용한 개발
-- **VitePress** - 정적 사이트 생성
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0;">
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/react.svg" alt="React" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">React</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/nextjs.svg" alt="Next.js" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Next.js</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/reactquery.svg" alt="React Query" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">React Query</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/threejs.svg" alt="Three.js" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Three.js</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/pixijs.svg" alt="PixiJS" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">PixiJS</span>
+  </div>
+</div>
 
 ### 스타일링
-- **CSS3** - Flexbox, Grid를 활용한 레이아웃
-- **TailwindCSS** - 유틸리티 퍼스트 CSS 프레임워크
-- **Styled Components** - CSS-in-JS 스타일링
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0;">
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/tailwindcss.svg" alt="TailwindCSS" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">TailwindCSS</span>
+  </div>
+</div>
 
-## Tools & Others
+## Backend
 
-### 개발 도구
-- **Git** - 버전 관리
-- **Yarn / npm** - 패키지 관리
-- **Vite** - 빌드 도구
-- **Webpack** - 번들러
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0;">
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/spring.svg" alt="Spring" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Spring</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/nestjs.svg" alt="Nest.js" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Nest.js</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/mysql.svg" alt="MySQL" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">MySQL</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/supabase.svg" alt="Supabase" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Supabase</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/docker.svg" alt="Docker" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Docker</span>
+  </div>
+</div>
 
-### 협업 도구
-- **GitHub** - 코드 저장소 및 협업
-- **Figma** - 디자인 협업
+## 개발 도구
 
-## 학습 중인 기술
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0;">
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/vitejs.svg" alt="Vite" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Vite</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/webpack.svg" alt="Webpack" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Webpack</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/babel.svg" alt="Babel" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Babel</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/prettier.svg" alt="Prettier" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Prettier</span>
+  </div>
+</div>
 
-- **React Native** - 모바일 앱 개발
-- **GraphQL** - 데이터 쿼리 언어
-- **Docker** - 컨테이너화
+## 협업
+
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0;">
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/storybook.svg" alt="Storybook" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Storybook</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/postman.svg" alt="Postman" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Postman</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 6px; background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <img src="/images/techstack/figma.svg" alt="Figma" style="width: 24px; height: 24px; flex-shrink: 0;" />
+    <span style="font-weight: 500; font-size: 0.9rem; color: var(--vp-c-text-1);">Figma</span>
+  </div>
+</div>
 
 ---
 
