@@ -70,7 +70,8 @@ export default defineConfig({
           { text: 'Web Design', link: '/sites/insight/webDesign' },
           { text: 'UX Design', link: '/sites/insight/uxDesign' },
           { text: 'Front Tech', link: '/sites/insight/frontTech' },
-          { text: 'Front 지식', link: '/sites/insight/frontKnowledge' }
+          { text: 'Front 지식', link: '/sites/insight/frontKnowledge' },
+          { text: 'WebGL / Three.js', link: '/sites/insight/webglThreejs' }
         ]
       }
     ],

@@ -10,17 +10,19 @@ hero:
     alt: MS98 Blog Hero Image
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /sites/markdown-examples
+      text: 글 보기
+      link: /sites/article
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 인사이트
+      link: /sites/insight/webDesign.md
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 실험실
+    details: 인터렉티브 UI 학습용
+    link: https://mslee-lab-shell.netlify.app/
+  - title: 포트폴리오
+    details: R3F 포트폴리오
+    link: https://r3f-portpolio.vercel.app/
+  - title: 메뉴 준비중
+    details: 아직 뭘 넣을지 생각은 안함
 ---
