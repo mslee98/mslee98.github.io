@@ -29,6 +29,17 @@ export default defineConfig({
   sitemap: { 
     hostname: "https://mslee98.github.io/",
   },
+  transformPageData(pageData) {
+    const canonicalUrl = `https://mslee98.github.io/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '')
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ])
+  },
   head: [
     // [
     //   'link',

@@ -7,3 +7,4 @@ export default {
   extends: DefaultTheme,
   Layout
 } satisfies Theme
+

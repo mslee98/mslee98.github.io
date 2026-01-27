@@ -75,3 +75,7 @@ root/
 │   ├── copy-dist-to-root.js
 │   ├── copy-dist
 ```
+
+
+### 주의 사항
+- vitepress robots.txt 파일 혹은 구글 인증 파일 등은 **root/public/**만 인식함

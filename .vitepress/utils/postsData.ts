@@ -5,7 +5,7 @@ export const allPosts: Post[] = [
     "title": "패키지 매니저란",
     "url": "/sites/article/packageManager/",
     "description": "패키지 매니저가 무엇인지, 그리고 어떻게 작동하는지에 대해 정리한다.",
-    "date": "2026-01-15",
+    "date": "2026-01-24",
     "tags": [
       "npm",
       "yarn",
