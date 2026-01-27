@@ -4,12 +4,12 @@
 
 ## 학습 자료
 
-- [MDN Web Docs](https://developer.mozilla.org/)
+- [Mobile Web view](https://dekoms-coding.tistory.com/72) - 모바일 웹뷰 내용 좋음
 - [JavaScript.info](https://javascript.info/)
 
-## 성능 최적화
+## 디자인 패턴
 
-- [Web.dev](https://web.dev/)
+- [patterns](https://www.patterns.dev/react/hoc-pattern/)
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
 ## 보안

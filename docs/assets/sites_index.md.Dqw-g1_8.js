@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.Dfzyfhmv.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"sites/index.md","filePath":"sites/index.md"}'),a={name:"sites/index.md"};function n(r,i,o,c,d,p){return s(),t("div")}const f=e(a,[["render",n]]);export{m as __pageData,f as default};

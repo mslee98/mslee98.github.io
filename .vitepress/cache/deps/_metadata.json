@@ -1,47 +1,56 @@
 {
-  "hash": "a4f3a7be",
+  "hash": "1bb38587",
   "configHash": "f3908829",
-  "lockfileHash": "71731eb1",
-  "browserHash": "1059e39b",
+  "lockfileHash": "07fc30ae",
+  "browserHash": "1adda503",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "cdfc57bc",
+      "fileHash": "2190d4e7",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "d559fbbb",
+      "fileHash": "c87e60eb",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/@vueuse/core/dist/index.js",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "0f2efe5e",
+      "fileHash": "afb20932",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/@vueuse/integrations/dist/useFocusTrap.js",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "ef4c7dbb",
+      "fileHash": "bf231f0d",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "63ff54c6",
+      "fileHash": "32035b75",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "3dabe4b4",
+      "fileHash": "85496763",
+      "needsInterop": false
+    },
+    "@vueuse/head": {
+      "src": "../../../node_modules/@vueuse/head/dist/index.mjs",
+      "file": "@vueuse_head.js",
+      "fileHash": "ffb6409c",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-TL5QK2B5": {
+      "file": "chunk-TL5QK2B5.js"
+    },
     "chunk-HVZOP4S7": {
       "file": "chunk-HVZOP4S7.js"
     },

@@ -24,6 +24,35 @@ export const allPosts: Post[] = ${JSON.stringify(posts, null, 2)}
 export default defineConfig({
   title: 'ms98 Blog',
   description: 'ms98-ssg-blog',
+
+  // SEO SETTING
+  sitemap: { 
+    hostname: "https://mslee98.github.io/",
+  },
+  head: [
+    [
+      'link',
+      {
+        rel: 'cannonical',
+        href: 'https://mslee98.github.io/'
+      }
+    ], 
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id={태그 ID}", // 태그 ID
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{태그 ID}');`, // 태그 ID
+    ],
+  ],
   
   // GitHub Pages 배포를 위한 base 경로 설정
   // mslee98.github.io는 루트 도메인이므로 base는 '/'로 설정
@@ -80,6 +109,31 @@ export default defineConfig({
     sidebar: {
       // Article 목록 페이지는 사이드바 없음 (태그 클라우드가 우측에 있음)
       '/sites/article/': [],
+
+      // 모노레포 섹션 사이드바
+      '/sites/article/monorepo/': [
+        {
+          text: '모노레포 개념',
+          items: [
+            { text: '모노레포 설명', link: '/sites/article/monorepo/' },
+            { text: '모노레포란 무엇인가?', link: '/sites/article/monorepo/introduction' },
+            { text: 'Monorepo vs Multirepo 장단점', link: '/sites/article/monorepo/pros-and-cons' },
+            { text: '모노레포 도구', link: '/sites/article/monorepo/tools' }
+          ]
+        }
+      ],
+
+      '/sites/article/packageManager/': [
+        {
+          text: '패키지매니저 개념',
+          items: [
+            { text: '패키지매니저 설명', link: '/sites/article/packageManager/' },
+            { text: '모노레포란 무엇인가?', link: '/sites/article/monorepo/introduction' },
+            { text: 'Monorepo vs Multirepo 장단점', link: '/sites/article/monorepo/pros-and-cons' },
+            { text: '모노레포 도구', link: '/sites/article/monorepo/tools' }
+          ]
+        }
+      ],
 
       // AboutMe 페이지 사이드바
       '/sites/aboutme/': [
