@@ -4,9 +4,6 @@ description: yarn workspace를 통해 실제 모노레포 구조를 구축 - 세
 date: 2024-01-10
 tags:
   - monorepo
-  - multirepo
-  - architecture
-  - frontend
 ---
 
 아 차라리 이 내용을 모노레포로 실험실 만들어보기 컨텐츠로 넘어가야겠다

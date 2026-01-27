@@ -6,12 +6,16 @@ description: 프론트엔드 관점에서 모노레포와 멀티레포를 비교
 date: 2026-01-27
 tags:
   - monorepo
-  - multirepo
-  - architecture
-  - frontend
 ---
 
-# 
+<!-- 
+### Title <Badge type="info" text="default" />
+### Title <Badge type="tip" text="^1.9.0" />
+### Title <Badge type="warning" text="beta" />
+### Title <Badge type="danger" text="caution" /> 
+-->
+
+# <Badge type="warning">작성 중</Badge>
 > 작성일: 2026-01-27
 
 ## 서론

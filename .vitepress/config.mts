@@ -95,7 +95,7 @@ export default defineConfig({
   themeConfig: {
     footer: {
       message: '인터랙션과 구조를 실험하는 프론트엔드 기록장',
-      copyright: '© 2024 MS98 · 대전 어딘가에서 코딩 중'
+      copyright: '© 2026 MS98 · 대전 어딘가에서 코딩 중'
     },
     // 네비게이션 바 (상단)
     nav: [
@@ -166,7 +166,7 @@ export default defineConfig({
 
     // 소셜 링크 (선택사항)
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mslee98/ms-fundamentals' }
+      { icon: 'github', link: 'https://github.com/mslee98/mslee98.github.io' }
     ],
 
     // 검색 기능 활성화

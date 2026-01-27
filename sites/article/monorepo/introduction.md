@@ -25,7 +25,6 @@ MSA 개념을 프론트엔드 영역에 적용한 것으로 하나의 거대한 
 
 이 중 모노레포는 **소스 코드 관리 전략**에 해당한다.
 
-
 ```text
 Monorepo  → 하나의 Repository에 여러 프로젝트
 Multirepo → 프로젝트마다 개별 Repository

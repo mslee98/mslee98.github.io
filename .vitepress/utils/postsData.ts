@@ -7,10 +7,7 @@ export const allPosts: Post[] = [
     "description": "프론트엔드 관점에서 모노레포와 멀티레포를 비교하고, 직접 구성해보며 느낀 점을 정리한다.",
     "date": "2026-01-27",
     "tags": [
-      "monorepo",
-      "multirepo",
-      "architecture",
-      "frontend"
+      "monorepo"
     ]
   },
   {
