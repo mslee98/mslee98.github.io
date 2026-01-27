@@ -41,7 +41,7 @@ export default defineConfig({
       "script",
       {
         async: "",
-        src: "https://www.googletagmanager.com/gtag/js?id={태그 ID}", // 태그 ID
+        src: "https://www.googletagmanager.com/gtag/js?id=G-WH0QXJRHK1, GT-W6XL9Z79", // 태그 ID
       },
     ],
     [
@@ -50,7 +50,7 @@ export default defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{태그 ID}');`, // 태그 ID
+      gtag('config', 'G-WH0QXJRHK1, GT-W6XL9Z79');`, // 태그 ID
     ],
   ],
   
