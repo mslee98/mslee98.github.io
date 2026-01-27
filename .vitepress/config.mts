@@ -41,7 +41,7 @@ export default defineConfig({
       "script",
       {
         async: "",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-WH0QXJRHK1, G-WH0QXJRHK1", // 태그 ID
+        src: "https://www.googletagmanager.com/gtag/js?id=G-WH0QXJRHK1", // 태그 ID
       },
     ],
     [
