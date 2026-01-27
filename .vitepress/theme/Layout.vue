@@ -17,7 +17,7 @@ import Giscus from '../components/Giscus.vue'
 const route = useRoute()
 const { site, frontmatter } = useData()
 
-// 페이지별 canonical URL 생성
+// 페이지별 canonical URL (반응형)
 const canonicalUrl = computed(() => {
   const base = site.value.base.replace(/\/$/, '')
   const path = route.path.endsWith('/')
@@ -27,12 +27,12 @@ const canonicalUrl = computed(() => {
   return `https://mslee98.github.io${base}${path}`
 })
 
-// SEO Head 설정
+// 🔥 computed/ref 자체를 넘긴다 (중요)
 useHead({
   link: [
     {
       rel: 'canonical',
-      href: frontmatter.value.canonical ?? canonicalUrl.value
+      href: computed(() => frontmatter.value.canonical ?? canonicalUrl.value)
     }
   ]
 })
