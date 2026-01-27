@@ -30,13 +30,13 @@ export default defineConfig({
     hostname: "https://mslee98.github.io/",
   },
   head: [
-    [
-      'link',
-      {
-        rel: 'cannonical',
-        href: 'https://mslee98.github.io/'
-      }
-    ], 
+    // [
+    //   'link',
+    //   {
+    //     rel: 'cannonical',
+    //     href: 'https://mslee98.github.io/'
+    //   }
+    // ], 
     [
       "script",
       {
