@@ -2,6 +2,18 @@
 import type { Post } from './posts'
 export const allPosts: Post[] = [
   {
+    "title": "모노레포(Monorepo) 정리",
+    "url": "/sites/article/monorepo/",
+    "description": "프론트엔드 관점에서 모노레포와 멀티레포를 비교하고, 직접 구성해보며 느낀 점을 정리한다.",
+    "date": "2026-01-27",
+    "tags": [
+      "monorepo",
+      "multirepo",
+      "architecture",
+      "frontend"
+    ]
+  },
+  {
     "title": "패키지 매니저란",
     "url": "/sites/article/packageManager/",
     "description": "패키지 매니저가 무엇인지, 그리고 어떻게 작동하는지에 대해 정리한다.",
@@ -22,18 +34,6 @@ export const allPosts: Post[] = [
       "storybook",
       "frontend",
       "tool"
-    ]
-  },
-  {
-    "title": "모노레포(Monorepo) 정리",
-    "url": "/sites/article/monorepo/",
-    "description": "프론트엔드 관점에서 모노레포와 멀티레포를 비교하고, 직접 구성해보며 느낀 점을 정리한다.",
-    "date": "2024-01-10",
-    "tags": [
-      "monorepo",
-      "multirepo",
-      "architecture",
-      "frontend"
     ]
   },
   {

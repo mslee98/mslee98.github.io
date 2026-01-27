@@ -1,4 +1,7 @@
 ---
+title: About | MS98 Tech Blog
+description: 인터랙티브한 프론트엔드 아키텍처를 실험하며 웹 기술과 학습 과정을 기록하는 프론트엔드 개발자 MSLee의 소개 페이지입니다.
+date: 2024-01-27
 outline: deep
 ---
 

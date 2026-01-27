@@ -29,7 +29,7 @@ function parseFrontmatter(content: string): {
 
   const frontmatter: Record<string, any> = {}
   const lines = frontmatterText.split('\n')
-  
+
   let currentKey = ''
   let arrayValues: string[] = []
   let inArray = false
@@ -38,44 +38,41 @@ function parseFrontmatter(content: string): {
     const trimmed = line.trim()
     if (!trimmed) continue
 
-    // 배열 항목
     if (trimmed.startsWith('- ')) {
       if (!inArray) {
         arrayValues = []
         inArray = true
       }
       let value = trimmed.slice(2).trim()
-      // 따옴표 제거
-      if ((value.startsWith('"') && value.endsWith('"')) || 
-          (value.startsWith("'") && value.endsWith("'"))) {
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
         value = value.slice(1, -1)
       }
       arrayValues.push(value)
       frontmatter[currentKey] = arrayValues
-    }
-    // 키-값 쌍
-    else if (trimmed.includes(':')) {
+    } else if (trimmed.includes(':')) {
       inArray = false
       const colonIndex = trimmed.indexOf(':')
       const key = trimmed.slice(0, colonIndex).trim()
       let value = trimmed.slice(colonIndex + 1).trim()
-      
+
       currentKey = key
-      
-      // 따옴표 제거
-      if ((value.startsWith('"') && value.endsWith('"')) || 
-          (value.startsWith("'") && value.endsWith("'"))) {
+
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
         value = value.slice(1, -1)
-      }
-      // 불리언 처리
-      else if (value === 'true') {
+      } else if (value === 'true') {
         frontmatter[key] = true
         continue
       } else if (value === 'false') {
         frontmatter[key] = false
         continue
       }
-      
+
       frontmatter[key] = value
     }
   }
@@ -83,16 +80,19 @@ function parseFrontmatter(content: string): {
   return { frontmatter, body }
 }
 
-// Article 디렉토리에서 모든 게시글 자동 로드 (재귀적으로 하위 디렉토리도 탐색)
+// Article 디렉토리에서 모든 게시글 자동 로드
 export function loadPosts(): Post[] {
   try {
     const cwd = typeof process !== 'undefined' ? process.cwd() : ''
     const articleDir = join(cwd, 'sites', 'article')
     const posts: Post[] = []
 
-    // 재귀적으로 디렉토리를 탐색하는 함수
-    // relativePath가 있으면 하위 디렉토리, 없으면 루트 레벨
-    function scanDirectory(dir: string, relativePath: string = '', isRootLevel: boolean = true): void {
+    function scanDirectory(
+      dir: string,
+      relativePath: string = '',
+      isRootLevel: boolean = true,
+      parentFrontmatter?: Record<string, any>
+    ): void {
       const items = readdirSync(dir)
 
       for (const item of items) {
@@ -100,71 +100,59 @@ export function loadPosts(): Post[] {
         const stat = statSync(itemPath)
 
         if (stat.isDirectory()) {
-          // 하위 디렉토리인 경우, index.md가 있는지 확인
           const indexPath = join(itemPath, 'index.md')
+          let currentDirFrontmatter = parentFrontmatter
+
           try {
             if (statSync(indexPath).isFile()) {
-              // index.md가 있으면 게시글 목록에 추가
               const content = readFileSync(indexPath, 'utf-8')
               const { frontmatter } = parseFrontmatter(content)
-              
-              const url = relativePath 
+              currentDirFrontmatter = frontmatter
+
+              const url = relativePath
                 ? `/sites/article/${relativePath}/${item}/`
                 : `/sites/article/${item}/`
 
-              const post: Post = {
+              posts.push({
                 title: frontmatter.title || item,
                 url,
                 description: frontmatter.description,
                 date: frontmatter.date,
                 tags: frontmatter.tags || []
-              }
-
-              posts.push(post)
+              })
             }
           } catch {
-            // index.md가 없으면 무시
+            // index.md 없음
           }
-          
-          // 하위 디렉토리도 재귀적으로 탐색 (하위 디렉토리의 일반 파일은 제외)
+
           const newRelativePath = relativePath ? `${relativePath}/${item}` : item
-          scanDirectory(itemPath, newRelativePath, false)
-        } else if (stat.isFile() && item.endsWith('.md')) {
-          // 루트 레벨의 .md 파일만 처리 (하위 디렉토리의 일반 .md 파일은 제외)
-          // index.md는 제외
+          scanDirectory(itemPath, newRelativePath, false, currentDirFrontmatter)
+        }
+
+        // 루트 레벨 md 파일
+        else if (stat.isFile() && item.endsWith('.md')) {
           if (item === 'index.md') continue
-          
-          // 하위 디렉토리에 있는 파일은 게시글 목록에 포함하지 않음
           if (!isRootLevel) continue
 
-          try {
-            const content = readFileSync(itemPath, 'utf-8')
-            const { frontmatter } = parseFrontmatter(content)
+          const content = readFileSync(itemPath, 'utf-8')
+          const { frontmatter } = parseFrontmatter(content)
 
-            // 파일명에서 확장자 제거하여 URL 생성
-            const fileName = item.replace(/\.md$/, '')
-            const url = `/sites/article/${fileName}`
+          const fileName = item.replace(/\.md$/, '')
+          const url = `/sites/article/${fileName}`
 
-            // frontmatter에서 정보 추출
-            const post: Post = {
-              title: frontmatter.title || fileName,
-              url,
-              description: frontmatter.description,
-              date: frontmatter.date,
-              tags: frontmatter.tags || []
-            }
-
-            posts.push(post)
-          } catch (error) {
-            console.warn(`Failed to parse ${item}:`, error)
-          }
+          posts.push({
+            title: frontmatter.title || fileName,
+            url,
+            description: frontmatter.description,
+            date: frontmatter.date ?? parentFrontmatter?.date,
+            tags: frontmatter.tags || parentFrontmatter?.tags || []
+          })
         }
       }
     }
 
     scanDirectory(articleDir, '', true)
 
-    // 날짜순으로 정렬 (최신순)
     return posts.sort((a, b) => {
       if (!a.date || !b.date) return 0
       return new Date(b.date).getTime() - new Date(a.date).getTime()

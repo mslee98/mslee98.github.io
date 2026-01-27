@@ -22,13 +22,14 @@ export const allPosts: Post[] = ${JSON.stringify(posts, null, 2)}
 // https://vitepress.dev/reference/site-config
 
 export default defineConfig({
-  title: 'ms98 Blog',
-  description: 'ms98-ssg-blog',
+  title: 'MS98 Tech Blog',
+  description: '인터랙티브한 프론트엔드 아키텍처를 실험하며 React·WebGL·시각화 기반 웹 기술과 학습 과정을 정리하는 개발자 기술 블로그',
 
   // SEO SETTING
   sitemap: { 
     hostname: "https://mslee98.github.io/",
   },
+  // cannonical 
   transformPageData(pageData) {
     const canonicalUrl = `https://mslee98.github.io/${pageData.relativePath}`
       .replace(/index\.md$/, '')
@@ -40,14 +41,8 @@ export default defineConfig({
       { rel: 'canonical', href: canonicalUrl }
     ])
   },
+  // google g tag
   head: [
-    // [
-    //   'link',
-    //   {
-    //     rel: 'cannonical',
-    //     href: 'https://mslee98.github.io/'
-    //   }
-    // ], 
     [
       "script",
       {
@@ -98,11 +93,16 @@ export default defineConfig({
   },
   
   themeConfig: {
+    footer: {
+      message: '인터랙션과 구조를 실험하는 프론트엔드 기록장',
+      copyright: '© 2024 MS98 · 대전 어딘가에서 코딩 중'
+    },
     // 네비게이션 바 (상단)
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/sites/aboutme/' },
       { text: 'Portfolio', link: 'https://r3f-portpolio.vercel.app/' },
+      { text: 'Lab', link: 'https://mslee-lab-shell.netlify.app/' },
       { text: 'Article', link: '/sites/article/' },
       {
         text: 'Insight',
@@ -121,12 +121,12 @@ export default defineConfig({
       // Article 목록 페이지는 사이드바 없음 (태그 클라우드가 우측에 있음)
       '/sites/article/': [],
 
-      // 모노레포 섹션 사이드바
+      // article - 모노레포 섹션 사이드바
       '/sites/article/monorepo/': [
         {
           text: '모노레포 개념',
           items: [
-            { text: '모노레포 설명', link: '/sites/article/monorepo/' },
+            { text: '모노레포 서론', link: '/sites/article/monorepo/' },
             { text: '모노레포란 무엇인가?', link: '/sites/article/monorepo/introduction' },
             { text: 'Monorepo vs Multirepo 장단점', link: '/sites/article/monorepo/pros-and-cons' },
             { text: '모노레포 도구', link: '/sites/article/monorepo/tools' }
@@ -134,6 +134,7 @@ export default defineConfig({
         }
       ],
 
+      // article - 패키지 매니저 섹션 사이드바
       '/sites/article/packageManager/': [
         {
           text: '패키지매니저 개념',
@@ -153,7 +154,7 @@ export default defineConfig({
           items: [
             { text: '기본정보', link: '/sites/aboutme/' },
             { text: '기술스택', link: '/sites/aboutme/skills' },
-            { text: '자격증', link: '/sites/aboutme/contact' }
+            { text: '자격증', link: '/sites/aboutme/certificate' }
           ]
         }
       ],

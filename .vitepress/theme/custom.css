@@ -39,15 +39,14 @@
   }
 }
 
-/* Hero name 줄바꿈 처리 - "mslee98 dev-blog"에서 "dev-blog"를 다음 줄로 */
-.VPHero .name {
+/* .VPHero .name {
   display: inline-block;
-  font-size: 0; /* 원본 텍스트 숨기기 */
+  font-size: 0; 
 }
 
 .VPHero .name::before {
   content: 'mslee98\A dev-blog';
   white-space: pre;
-  font-size: 3rem; /* 원래 폰트 크기 복원 */
+  font-size: 3rem; 
   line-height: 1.2;
-}
+} */

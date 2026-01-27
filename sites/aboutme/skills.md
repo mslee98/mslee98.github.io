@@ -1,4 +1,6 @@
 ---
+title: Tech Stack | MS98 Tech Blog
+description: React, TypeScript, Three.js를 중심으로 인터랙티브 UI와 프론트엔드 아키텍처를 설계하며, 백엔드와 인프라까지 아우르는 기술 스택을 정리합니다.
 outline: deep
 ---
 

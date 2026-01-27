@@ -1,15 +1,12 @@
 ---
-title: Monorepo vs Multirepo 장단점
-description: 모노레포와 멀티레포의 장단점 비교
-date: 2024-01-10
-tags:
-  - monorepo
-  - multirepo
-  - architecture
-  - frontend
+title: Monorepo vs Multirepo | 장단점과 선택 기준
+description: 프론트엔드 관점에서 모노레포와 멀티레포의 장단점을 비교하고, 팀 규모와 프로젝트 성격에 따른 선택 기준을 정리합니다.
+outline: deep
 ---
 
-## Monorepo 장단점
+# Monorepo vs Multirepo 장단점
+
+## Monorepo
 
 ### ✅ Monorepo 장점
 
@@ -51,7 +48,8 @@ import { Button } from '@shared/ui';
 - 수정 즉시 반영
 - UI / 유틸 / 타입 공유가 매우 수월
 
-👉 아무래도 **Monorepo**가 많이 발전하면서  **디자인 시스템**도 같이 발전하는거 아닐까?
+👉 아무래도 **Monorepo**가 많이 발전하면서  
+**디자인 시스템**도 같이 발전하는거 아닐까?
 
 ---
 
@@ -84,7 +82,7 @@ import { Button } from '@shared/ui';
 아무 생각 없이 시작하면  
 중간중간 다시 손봐야 할 부분이 계속 생긴다.
 
-> 모노레포는 "일단 만들어두고 쓰는 구조"가 아니다.
+> 모노레포는 "일단 만들어두고 쓰는 구조"가 아니다. 병렬적으로 CI를 처리한다든가 CI/CD 수준에서도 고민을 많이 해봐야한다.
 
 ---
 
@@ -98,7 +96,7 @@ import { Button } from '@shared/ui';
 - IDE 인덱싱 부담
 - 대규모 조직에서는 성능 이슈 발생 가능
 
-## Multirepo 장단점
+## Multirepo
 
 ### ✅ Multirepo 장점
 
@@ -162,3 +160,4 @@ Monorepo와 Multirepo는
 "플랫폼 팀은 없지만, 구조는 갖추고 싶다"면  
 혼자서라도 모노레포를 경험해보는 건  
 충분히 의미가 있다고 생각한다.
+
