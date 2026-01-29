@@ -139,8 +139,8 @@ export default defineConfig({
         {
           text: '패키지매니저 개념',
           items: [
-            { text: '패키지매니저 설명', link: '/sites/article/packageManager/' },
-            { text: '모노레포란 무엇인가?', link: '/sites/article/monorepo/introduction' },
+            { text: '패키지매니저란?', link: '/sites/article/packageManager/' },
+            { text: '패키지매니저 동작과정', link: '/sites/article/packageManager/lifeCycle' },
             { text: 'Monorepo vs Multirepo 장단점', link: '/sites/article/monorepo/pros-and-cons' },
             { text: '모노레포 도구', link: '/sites/article/monorepo/tools' }
           ]
@@ -166,8 +166,12 @@ export default defineConfig({
 
     // 소셜 링크 (선택사항)
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mslee98/mslee98.github.io' }
-    ],
+    {
+      icon: 'github',
+      link: 'https://github.com/mslee98/mslee98.github.io'
+    },
+  ],
+
 
     // 검색 기능 활성화
     search: {

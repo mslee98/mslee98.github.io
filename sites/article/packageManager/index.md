@@ -12,9 +12,6 @@ outline: deep
 
 # 패키지 매니저란?
 
-https://toss.tech/article/node-modules-and-yarn-berry  
-https://toss.tech/article/lightning-talks-package-manager  
-
 패키지 매니저는 한마디로 말하면  
 **라이브러리의 다운로드, 의존성 해결, 버전 고정, 그리고 실행 환경 연결까지 책임지는 도구**다.
 
@@ -34,17 +31,17 @@ import React from 'react'
 
 ECMAScript 스펙만 놓고 보면, import는 원래 명확한 경로만 허용한다.
 
-```
+```js
 import something from './something.js'
 import lib from '../lib/index.js'
 ```
 
 이 모호함을 해결하기 위해 등장한 것이
-package.json + 패키지 매니저 조합이다.
+`package.json` + **패키지 매니저** 조합이다.
 
-우리가 프로젝트 루트에 작성하는 package.json에는 이런 정보가 들어 있다.
+우리가 프로젝트 루트에 작성하는 `package.json`에는 이런 정보가 들어 있다.
 
-```js
+```json
 {
   "dependencies": {
     "react": "^18.2.0" // 18.2.0 ~ 19 미만 버전중 가장 최신인 버전을 선택
@@ -61,3 +58,7 @@ package.json + 패키지 매니저 조합이다.
 4. 그 결과를 lockfile에 고정한다
 
 위 과정을 통해 의존성을 가져올 수 있다.
+
+## 참고
+[Toss | node_modules로부터 우리를 구원해 줄 Yarn Berry](https://toss.tech/article/node-modules-and-yarn-berry)  
+[Toss | 패키지 매니저의 과거, 토스의 선택, 그리고 미래](https://toss.tech/article/lightning-talks-package-manager)  

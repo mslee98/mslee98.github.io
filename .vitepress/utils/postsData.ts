@@ -2,6 +2,15 @@
 import type { Post } from './posts'
 export const allPosts: Post[] = [
   {
+    "title": "카카오뱅크 시리즈",
+    "url": "/sites/article/kakaobank/",
+    "description": "이전 모노레포 구조를 기반으로 나만의 실험실 카카오뱅크편을 기획할 예정.",
+    "date": "2026-01-27",
+    "tags": [
+      "monorepo"
+    ]
+  },
+  {
     "title": "모노레포(Monorepo) 정리",
     "url": "/sites/article/monorepo/",
     "description": "프론트엔드 관점에서 모노레포와 멀티레포를 비교하고, 직접 구성해보며 느낀 점을 정리한다.",
