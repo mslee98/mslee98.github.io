@@ -24,6 +24,15 @@ https://velog.io/@phobos90/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EB%AC%B8%EB%B2%9
   접은 내용(ex 소스 코드)
 </details>
 
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming. 
+
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed. 
+
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
+
 -->
 
 # <Badge type="warning">작성 중 | 2026-01-27</Badge>
