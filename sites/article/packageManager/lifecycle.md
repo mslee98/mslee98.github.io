@@ -243,11 +243,10 @@ pnpm은 `node_modules` 구조를 유지하면서 어떻게 성능을 높였을�
                 ├─ fp.js     (hard link)
   ```
 
-  - Hard Link를 통해 접근한다.
+Hard Link를 통해 접근한다.
 
-  - 하지만 pnpm 동작방식을 찾다보면 symlink(Symbolic Link)라는 말이 나오는데 이는 무엇인가?
-
-  - Node.js의 require() 해석 규칙(루트까지 상향탐색) 때문인데,
+하지만 pnpm 동작방식을 찾다보면 symlink(Symbolic Link)라는 말이 나오는데 이는 무엇인가?
+Node.js의 require() 해석 규칙(루트까지 상향탐색) 때문인데,
 
 ```
 node_modules/foo

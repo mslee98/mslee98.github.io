@@ -14,7 +14,8 @@ WebGL과 Three.js 관련 참고 링크들을 모아둔 페이지입니다.
 - [WebGL Fundamentals](https://webglfundamentals.org/)
 - [Learn WebGL](https://learnwebgl.brown37.net/)
 
-## 라이브러리 & 프레임워크
+## 모델링 파일
+- [League Of Legend 모델링 파일](https://modelviewer.lol/?lang=ko-KR)
 
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
 - [Babylon.js](https://www.babylonjs.com/)

@@ -14,7 +14,8 @@
 
 ## 디자인 패턴
 - [Apple | 디자인 시스템](https://developer.apple.com/kr/design/human-interface-guidelines/foundations)
-- [당근마켓 | 디자인 시스템](https://seed-design.io/docs)
+- [당근 | 디자인 시스템](https://seed-design.io/docs)
+- [당근 | 디자인 시스템 개발자 블로그-정현수님](https://junghyeonsu.com/)
 - [Toss | 디자인 시스템 다시 생각해보기](https://toss.tech/article/rethinking-design-system?utm_source=email)
 
 - [patterns](https://www.patterns.dev/react/hoc-pattern/)
