@@ -9,7 +9,7 @@
 - [Next.js](https://nextjs.org/)
 
 ## 상태 관리
-
+- [Toss payments | useState이란?](https://docs.tosspayments.com/blog/react-use-state)
 - [Redux](https://redux.js.org/)
 - [Zustand](https://zustand-demo.pmnd.rs/)
 
