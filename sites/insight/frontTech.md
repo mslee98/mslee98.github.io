@@ -5,6 +5,8 @@
 ## 프레임워크
 
 - [React](https://react.dev/)
+- [Yarn + React  + TS + Jest Cypress 초기세팅](https://velog.io/@remon/Yarn-berry%EC%97%90%EC%84%9C-React-TypeScript-Jest-Cypress-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0)
+
 - [Vue.js](https://vuejs.org/)
 - [Next.js](https://nextjs.org/)
 
